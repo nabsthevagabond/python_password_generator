@@ -1,0 +1,4 @@
+#ignore list
+
+#python virtual venv
+venv
