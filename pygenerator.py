@@ -83,15 +83,10 @@ class PyGen:
         return self.currentPassword
 
     def __repr__(self):
-        objStr = f"Password: {self.currentPassword}\nSecure Password: {self.is_password_strong()}\n"
+        objStr = f"Password: {self.currentPassword}\nSecure Password: {self.is_password_strong}"
         return objStr
 
 
-obj = PyGen("hello")
-print(f"Password: {obj.password()}")
-print(f"Contains Number: {obj.check_number()}")
-print(f"Sufficent Length: {obj.check_passwordlength()}")
-print(f"Contains Lowercase: {obj.check_lowercase()}")
-print(f"Contains Special characters: {obj.check_special_character()}")
-print(f"Strong Password: {obj.is_password_strong}")
-print(f"secure Password: {obj.secure_password}")
+if __name__ == "__main__":
+    obj = PyGen("Hello World!")
+    print(obj)

@@ -2,4 +2,8 @@
 
 #python virtual venv
 venv
-.vscode
+.vscode/
+
+#python files
+__pycache__
+*.pyc
