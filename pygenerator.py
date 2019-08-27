@@ -57,7 +57,7 @@ class PyGen:
         return 1 if len(self.currentPassword) >= 8 else 0
 
     @property
-    def is_password_strong(self):
+    def is_secure(self):
         password_strength = int(self.check_lowercase(
         ) + self.check_uppercase() + self.check_number() + self.check_special_character())
         return True if password_strength >= 3 else False
@@ -73,7 +73,7 @@ class PyGen:
         chr_space = self.shuffled_character_space()
         self.currentPassword = ""
 
-        while not self.is_password_strong:
+        while not self.is_secure:
             tmp_password = ""
             for _ in range(self.maxLength):
                 index = random.randrange(len(chr_space))
@@ -83,7 +83,7 @@ class PyGen:
         return self.currentPassword
 
     def __repr__(self):
-        objStr = f"Password: {self.currentPassword}\nSecure Password: {self.is_password_strong}"
+        objStr = f"Password: {self.currentPassword}\nSecure Password: {self.is_secure}"
         return objStr
 
 
